@@ -1,0 +1,394 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    padding: 20px 50px;
+}
+
+.navTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search{
+    display: flex;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.searchInput{
+    border: none;
+    background-color: transparent;
+}
+
+.searchInput::placeholder{
+    color: lightgray;
+}
+
+.limitedOffer{
+    font-size: 20px;
+    border-bottom: 3px solid green;
+    cursor: pointer;
+}
+
+.navBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItem{
+    margin-right: 50px;
+    cursor: pointer;
+    color:lightgray;
+    font-weight: 400;
+}
+
+/* Slider css */
+
+.slider{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 85%);
+    overflow: hidden;
+}
+.sliderWrapper{
+    display: flex;
+    width:500vw;
+    transition: all 1s ease-in-out;
+}
+
+.sliderItem{
+    width:100vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+
+.sliderBg{
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: absolute;
+}
+
+.sliderImg{
+    z-index: 1;
+}
+
+.sliderTitle{
+    position: absolute;
+    top: 10%;
+    right:10%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.sliderPrice{
+    position: absolute;
+    top: 10%;
+    left:7%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 60px;
+    border: 1px solid gray;
+}
+
+.buyButton{
+    z-index: 1;
+    position: absolute;
+    top:50%;
+    right:10%;
+    font-size: 30px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 10px ;
+}
+
+.buyButton:hover{
+    background-color: black;
+    color:white;
+}
+
+.sliderItem:nth-child(1) .sliderBg{
+    background-color: rgb(145, 179, 145);
+}
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: cornflowerblue;
+}
+.sliderItem:nth-child(3) .sliderBg{
+    background-color: rgb(128, 171, 176);
+}
+.sliderItem:nth-child(4) .sliderBg{
+    background-color: rgb(206, 209, 183);
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: rgb(184, 118, 154);
+}
+
+/* css for features */
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureImg{
+    width: 50px;
+    height: 50px;
+}
+
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.featureDesc{
+    color:gray;
+    width:50%;
+    height:100px;
+}
+
+/* css for product section */
+.product{
+    height: 100vh;
+    background-color: whitesmoke;
+    position:relative;
+    clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
+}
+
+.payment{
+    width: 500px;
+    height: 515px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    left:0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 9px -1px 73px 47px rgba(148,144,144,0.75);
+    -webkit-box-shadow: 9px -1px 73px 47px rgba(148,144,144,0.75);
+    -moz-box-shadow: 9px -1px 73px 47px rgba(148,144,144,0.75);
+}
+.payTitle{
+    font-size: 25px;
+    font-weight: 400;
+    color:gray
+}
+.payInput{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border:none;
+    border-bottom: 1px solid gray;
+}
+
+.productImg{
+    width: 50%;
+}
+
+.productDetails{
+    position: absolute;
+    top:10%;
+    right:0%;
+    width:40%;
+    padding: 50px;
+}
+.productTitle{
+    font-size: 74px;
+    font-weight: 900;
+}
+.productDesc{
+    color:gray;
+    font-size: 20px;
+}
+.colors,.sizes{
+    display: flex;
+}
+.color{
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: black;
+    cursor: pointer;
+}
+.color:last-child{
+    background-color: darkblue;
+}
+.size{
+    border:1px solid black;
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.buyBtn{
+    float: right;
+    padding: 10px;
+    font-weight: 600;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+.buyBtn:hover{
+    background-color: white;
+    color:black;
+}
+
+.cardIcon{
+    margin-right: 10px;
+}
+
+.cvvArea{
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payBtn{
+    position: absolute;
+    height:40px;
+    left: 0;
+    bottom:-40px;
+    width:100%;
+    cursor:pointer;
+    background-color: #369e62;
+    color:white;
+    border:none;
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:10px;
+    right:10px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    align-items: center;justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.footer{
+    display: flex;
+    padding: 20px;
+    background-color: black;
+    color: white ;
+    margin-top: 10px;
+}
+
+.footerLeft{
+    display: flex;
+    flex:2;
+}
+
+.flItem{
+    flex:1;
+}
+
+.flList{
+    list-style: none;
+    padding: 0;
+}
+
+.flListItem{
+    color:gray;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+.footerRight{
+    flex:1;
+}
+
+.fuIcons{
+    display: flex;
+}
+
+.fuImg{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.join{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    padding: 6px 8px; 
+}
+
+.frinput{
+    padding: 5px;
+}
+
+.copyright{
+    font-weight: 300;
+}
+
+@media screen and (max-width:480px) {
+    .search{
+        display: none;
+    }
+    .navBottom{
+        flex-wrap: wrap;
+        padding-top: 15px;
+    }
+    nav{
+        padding: 21px;
+    }
+
+    .slider{
+        clip-path: none;
+    }
+
+    .sliderImg{
+        width: 90%;
+    }
+
+    .sliderBg{
+        width: 100%;
+        height: 100%;
+    }
+
+    .sliderTitle{
+        display: none;
+    }
+
+    .sliderPrice{
+        bottom: 0;
+        left: 0;
+        top: unset;
+    }
+}
